@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from "react";
 import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
-import { LinearGradient } from "expo-linear-gradient"
+
 
 export default function App() {
 
