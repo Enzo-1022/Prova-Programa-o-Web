@@ -14,11 +14,6 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <linearGradient 
-        colors={['rgb(5,4,3), rgb(128,19,13), rgb(248,236,79)']}
-        style={ styles.Background}
-      />
-
       <Text >Calcular Area do triangulo </Text>
 
       <Text>Informe a area do triangulo</Text>
