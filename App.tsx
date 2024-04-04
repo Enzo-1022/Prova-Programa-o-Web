@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from "react";
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { LinearGradient } from "expo-linear-gradient"
 
 export default function App() {
 
@@ -12,6 +13,12 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+
+      <linearGradient 
+        colors={['rgb(5,4,3), rgb(128,19,13), rgb(248,236,79)']}
+        style={ styles.Background}
+      />
+
       <Text >Calcular Area do triangulo </Text>
 
       <Text>Informe a area do triangulo</Text>
@@ -20,8 +27,7 @@ export default function App() {
       <Text>Informe a Altura do triangulo</Text>
       <TextInput onChangeText={setAltura} keyboardType="numeric" style={styles.Input}/>
 
-
-      <Text>{calculoAreaTriangulo}</Text>
+      <Text> { calculoAreaTriangulo ? `${calculoAreaTriangulo}` : '' } </Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -34,12 +40,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  Label: {
-    
-  },
   Input: {
     width: '90%',
     borderWidth: 2,
     padding: 5
+  },
+  Background: {
+    position : 'absolute',
+    top: 0,
+    left: 0,
+    height: "auto"
   }
 });
